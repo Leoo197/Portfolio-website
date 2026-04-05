@@ -2,7 +2,7 @@
 
 This is a responsive, multi-page portfolio website built for my academic project. It showcases my technical skills, academic qualifications, and projects.
 
-🚀 **Live Website:** [Click here to view my portfolio](https://Leoo197.github.io/Portfolio-website)
+**Live Website:** [Click here to view my portfolio](https://Leoo197.github.io/Portfolio-website)
 
 ## Website Structure
 The website is structured into the following separate HTML pages to keep content organized:
