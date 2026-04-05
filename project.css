@@ -1,0 +1,248 @@
+/* --- Global Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(10, 10, 15);
+    color: rgb(226, 232, 240);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- Navigation --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5rem;
+    background-color: rgba(10, 10, 15, 0.8);
+    position: sticky;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    animation: slideDown 0.6s ease-out;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(148, 163, 184);
+    font-weight: 400;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active a {
+    color: rgb(236, 72, 153);
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+.invert {
+    filter: invert(1);
+}
+
+/* --- Global Section Styling --- */
+.projects-section {
+    background-color: #0f172a;
+    padding: 4rem 2rem;
+    color: white;
+    font-family: inherit;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight {
+    color: #ff007f;
+}
+
+.section-title p {
+    color: #7b7b93;
+    font-size: 1.1rem;
+}
+
+/* --- The Flexbox Grid --- */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- The Project Cards --- */
+.project-card {
+    background-color: #1e1e28;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: rgb(0, 212, 255);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.15);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+/* --- Tech Stack Tags --- */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-stack span {
+    background-color: #2a2a35;
+    color: rgb(0, 212, 255);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.project-card p {
+    color: #b0b0c0;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+/* --- The Button & Image Icon --- */
+.card-links {
+    margin-top: auto;
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: transparent;
+    color: rgb(0, 212, 255);
+    border: 2px solid rgb(0, 212, 255);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+    background-color: rgb(0, 212, 255);
+    color: #0f172a;
+}
+
+.project-btn .btn-icon {
+    width: 20px;
+    height: auto;
+}
+
+.fade-in-down {
+    animation: fadeInDown 1s ease-in forwards;
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease-in forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}

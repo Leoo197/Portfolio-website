@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(10, 10, 15);
+    color: rgb(226, 232, 240);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- Navigation --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5rem;
+    background-color: rgba(10, 10, 15, 0.8);
+    position: sticky;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    animation: slideDown 0.6s ease-out;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(148, 163, 184);
+    font-weight: 400;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active a {
+    color: rgb(236, 72, 153);
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+.invert {
+    filter: invert(1);
+}
+
+/* Content */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem 3rem 0 0;
+    margin-bottom: 10rem;
+    flex-wrap: wrap;
+}
+
+.content-left {
+    max-width: 600px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 300px;
+}
+
+.content-right {
+    max-width: 600px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 300px;
+}
+
+div .main-heading {
+    text-align: center;
+    line-height: 1.2;
+    font-size: 4rem;
+}
+
+div .two {
+    color: rgb(255, 0, 174);
+}
+
+div .contact-text .sub-heading {
+    padding: 1rem 0;
+}
+
+div .contact-text .text {
+    padding-bottom: 2.5rem;
+    color: rgb(148, 163, 184);
+}
+
+.contact-info p {
+    color: rgb(226, 232, 240);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-info i {
+    color: rgb(0, 212, 255);
+    font-size: 1.3rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(0, 212, 255);
+    border-radius: 50%;
+    color: rgb(0, 212, 255);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: rgb(0, 212, 255);
+    color: rgb(22, 22, 34);
+    transform: translateY(-5px);
+}
+
+.content-right {
+    margin-top: 3rem;
+}
+
+/* 2. The sleek, dark input fields */
+.content-right input,
+.content-right textarea {
+    width: 90%;
+    background-color: #1e1e28;
+    color: white;
+    border: 2px solid #2a2a35;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.content-right input:focus,
+.content-right textarea:focus {
+    outline: none;
+    border-color: rgb(0, 212, 255);
+    background-color: #23232f;
+}
+
+.content-right textarea {
+    height: 10rem;
+}
+
+.content-right .button {
+    transition: background-color 1s ease;
+}
+
+.content-right .button:hover {
+    background-color: rgb(0, 212, 255);
+}
+
+.slide-right {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.slide-left {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
